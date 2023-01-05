@@ -86,7 +86,7 @@
 
                 3 {
                         bindings = <
-                                &kp LA(F4)   &kp PAGE_UP &kp UP    &kp PAGE_DOWN &kp LC(LS(TAB))   &kp LC(TAB)      &addspace    &quoteswap   &htmlformat  &trans       &trans       &trans       
+                                &kp LA(F4)   &kp PAGE_UP &kp UP    &kp PAGE_DOWN &kp LC(LS(TAB))   &kp LC(TAB)      &addspace    &htmlformat  &quoteswap   &trans       &trans       &trans       
                                 &kp LC(W)    &kp LEFT    &kp DOWN  &kp RIGHT     &kp LA(LEFT)      &kp LA(RIGHT)    &trans       &trans       &trans       &trans       &trans       &trans
                                 &kp LG(DOWN) &kp LC(N)   &kp LC(T) &kp LC(LS(N)) &kp LC(LS(MINUS)) &kp LC(LS(PLUS)) &trans       &trans       &trans       &trans       &trans       &bt BT_CLR
                                                                    &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3 &bt BT_SEL 4 &trans
