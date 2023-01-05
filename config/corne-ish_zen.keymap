@@ -111,7 +111,27 @@
                                  , <&kp LC(V)>
                                  , <&kp DQT>                               
                                  ;
-                };                     
+                };           
+                selectline: selectline {
+                        compatible = "zmk,behavior-macro";
+                        label = "ZM_selectline";
+                        #binding-cells = <0>;
+                        wait-ms = <5>;
+                        tap-ms = <5>;
+                        bindings = <&kp HOME>
+                                 , <&kp LS(END)>                               
+                                 ;
+                };   
+                selectword: selectword {
+                        compatible = "zmk,behavior-macro";
+                        label = "ZM_selectword";
+                        #binding-cells = <0>;
+                        wait-ms = <5>;
+                        tap-ms = <5>;
+                        bindings = <&kp LC(LEFT)>
+                                 , <&kp LC(LS(RIGHT))>                               
+                                 ;
+                };                             
         };
 };
  
@@ -148,9 +168,9 @@
 
                 3 {
                         bindings = <
-                                &kp LA(F4)   &kp PAGE_UP &kp UP        &kp PAGE_DOWN &kp LC(LS(TAB))   &kp LC(TAB)      &pairparen    &addspace   &quoteswap &trans &trans      &to 4       
-                                &kp LC(W)    &kp LEFT    &kp DOWN      &kp RIGHT     &kp LA(LEFT)      &kp LA(RIGHT)    &pairbraces   &doend      &trans     &trans &pairquotes &trans
-                                &kp LG(DOWN) &kp LC(N)   &kp LC(T)     &kp LC(LS(N)) &kp LC(LS(MINUS)) &kp LC(LS(PLUS)) &pairbrackets &htmlformat &trans     &trans &trans      &mo 6
+                                &kp LA(F4)   &kp PAGE_UP &kp UP        &kp PAGE_DOWN &kp LC(LS(TAB))   &kp LC(TAB)      &pairparen    &addspace   &htmlformat &trans &trans      &to 4       
+                                &kp LC(W)    &kp LEFT    &kp DOWN      &kp RIGHT     &kp LA(LEFT)      &kp LA(RIGHT)    &pairbraces   &doend      &quoteswap  &trans &pairquotes &trans
+                                &kp LG(DOWN) &kp LC(N)   &kp LC(T)     &kp LC(LS(N)) &kp LC(LS(MINUS)) &kp LC(LS(PLUS)) &pairbrackets &selectline &selectword &trans &trans      &mo 6
                                                                        &trans        &trans            &trans           &trans        &trans      &trans
    
                         >;
