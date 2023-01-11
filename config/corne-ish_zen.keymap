@@ -218,9 +218,9 @@
                 //                  , <&kp ENTER>                               
                 //                  ;
                 // }; 
-                popouttab: popouttab {
+                poptabchrome: poptabchrome {
                         compatible = "zmk,behavior-macro";
-                        label = "ZM_popouttab";
+                        label = "ZM_poptabchrome";
                         #binding-cells = <0>;
                         wait-ms = <5>;
                         tap-ms = <5>;
@@ -284,16 +284,16 @@
                                  , <&kp LC(V)>                               
                                  ;
                 }; 
-                deleteword: deleteword {
-                        compatible = "zmk,behavior-macro";
-                        label = "ZM_deleteword";
-                        #binding-cells = <0>;
-                        wait-ms = <5>;
-                        tap-ms = <5>;
-                        bindings = <&shifcontrolleft>
-                                 , <&kp BSPC>                            
-                                 ;
-                };  
+                // deleteword: deleteword {
+                //         compatible = "zmk,behavior-macro";
+                //         label = "ZM_deleteword";
+                //         #binding-cells = <0>;
+                //         wait-ms = <5>;
+                //         tap-ms = <5>;
+                //         bindings = <&shifcontrolleft>
+                //                  , <&kp BSPC>                            
+                //                  ;
+                // };  
                 shifcontrolleft: shifcontrolleft {
                         compatible = "zmk,behavior-macro";
                         label = "ZM_shifcontrolleft";
@@ -349,7 +349,17 @@
                         tap-ms = <5>;
                         bindings = <&kp B &kp L &kp U &kp E &kp T &kp O &kp O &kp T &kp H >                          
                                  ;
-                };                            
+                };     
+                poptabvscode: poptabvscode {
+                        compatible = "zmk,behavior-macro";
+                        label = "ZM_poptabvscode";
+                        #binding-cells = <0>;
+                        wait-ms = <5>;
+                        tap-ms = <5>;
+                        bindings = <&kp LC(K)>
+                                 , <&kp O>                          
+                                 ;
+                };                   
         };
 };
  
@@ -388,8 +398,8 @@
                 NavAppNav {
                         bindings = <
                                 &kp GRAVE    &kp HOME     &kp UP       &kp END      &kp PLUS     &thislinepairparen    &kp LC(LS(TAB))       &kp LC(TAB)      &kp HOME         &kp UP     &kp END          &kp BSPC     
-                                &kp TAB      &kp LEFT     &kp DOWN     &kp RIGHT    &kp EQUAL    &thislinepairbraces   &kp LA(LEFT)          &kp LA(RIGHT)    &kp LEFT         &kp DOWN   &kp RIGHT        &kp ENTER    
-                                &kp LSHFT    &kp PIPE     &kp UNDER    &kp COLON    &kp MINUS    &thislinepairbrackets &kp LC(LS(MINUS))     &kp LC(LS(PLUS)) &opentaskmanager &popouttab &openfolderincmd &kp RSHFT    
+                                &kp TAB      &kp LEFT     &kp DOWN     &kp RIGHT    &kp EQUAL    &thislinepairbraces   &kp LA(LEFT)          &kp LA(RIGHT)    &kp LEFT         &kp DOWN   &kp RIGHT        &kp PAGE_UP    
+                                &kp LSHFT    &kp PIPE     &kp UNDER    &kp COLON    &kp MINUS    &thislinepairbrackets &kp LC(LS(MINUS))     &kp LC(LS(PLUS)) &opentaskmanager &poptabchrome &openfolderincmd &kp PAGE_DOWN  
                                                                        &trans       &trans       &lt NumCharFunc SPACE &trans                &trans           &trans       
                         >;
                 };
@@ -405,9 +415,9 @@
 
                 AppNavMacro {
                         bindings = <
-                                &kp LA(F4)    &kp HOME         &kp UP     &kp END          &kp LC(LS(TAB))   &kp LC(TAB)      &selectionpairparen    &addspacedown            &removecharacterdown   &movelineup        &movelinedown        &deleteword       
+                                &kp LA(F4)    &kp HOME         &kp UP     &kp END          &kp LC(LS(TAB))   &kp LC(TAB)      &selectionpairparen    &addspacedown            &removecharacterdown   &movelineup        &movelinedown        &poptabvscode       
                                 &kp PG_UP     &kp LEFT         &kp DOWN   &kp RIGHT        &kp LA(LEFT)      &kp LA(RIGHT)    &selectionpairbraces   &selectionpairinequality &selectionblockcomment &selectiondoend    &selectionpairquotes &selectline
-                                &kp PAGE_DOWN &opentaskmanager &popouttab &openfolderincmd &kp LC(LS(MINUS)) &kp LC(LS(PLUS)) &selectionpairbrackets &shifcontrolleft         &selectword            &shiftcontrolright &movemaxwindowleft   &movemaxwindowright
+                                &kp PAGE_DOWN &opentaskmanager &poptabchrome &openfolderincmd &kp LC(LS(MINUS)) &kp LC(LS(PLUS)) &selectionpairbrackets &shifcontrolleft         &selectword            &shiftcontrolright &movemaxwindowleft   &movemaxwindowright
                                                                           &trans           &trans            &trans           &to Gaming             &trans                   &trans
    
                         >;
